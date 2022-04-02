@@ -1,6 +1,6 @@
      import React from 'react';
-import { Line, XAxis } from 'recharts';
-     
+import { Legend, Line, LineChart, Pie, PieChart, Tooltip, XAxis, YAxis } from 'recharts';
+
      const Dashboard = () => {
          const data = [
             {
@@ -42,11 +42,20 @@ import { Line, XAxis } from 'recharts';
         ]
          return (
              <div>
-               <Dashboard width={400} height={500} data={data}>
-                   <Line dataKey={"investment"}></Line>
-                   <Line dataKey={"sell"}></Line>
-                   <XAxis dataKey={"month"}></XAxis>
-               </Dashboard>
+               <LineChart width={200} height={400} data={data}>
+               <XAxis dataKey="month" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Line type="monotone" dataKey="investment" stroke="#FF0000" activeDot={{ r: 8 }} />
+                    <Line type="monotone" dataKey="revenue" stroke="#00FF00" />
+                    <Line type="monotone" dataKey="sell" stroke="#0000FF" />
+               </LineChart>
+
+               <PieChart width={400} height={400}>
+                    <Pie data={data} dataKey="revenue" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
+                    <Pie data={data} dataKey="investment" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label={true} />
+                </PieChart>
              </div>
          );
      };
