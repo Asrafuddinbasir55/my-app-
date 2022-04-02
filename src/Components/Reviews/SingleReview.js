@@ -3,13 +3,14 @@
      const SingleReview = ({rev}) => {
         console.log(rev) 
 
-         const {name, ratings, reviews } = rev;
+         const {name, ratings, reviews, id } = rev;
           console.log(name);
          return (
              <div>
                  <h1>Name: {name}</h1>
-                 <p>Ratings: {ratings}</p> 
-                 <p>Reviews: {reviews}</p>
+                 <p>Id:{id}</p>
+                 <p>Ratings:{ratings}</p> 
+                 <p>Reviews:{reviews}</p>
              </div> 
          );
      };

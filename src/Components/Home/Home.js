@@ -3,6 +3,7 @@ import useReviews from '../../Hooks/useReviews';
      import  './Home.css';
     const Home = () => {
       const [review ] = useReviews()
+       
         return (
      <>
            <div className='img-content'>
@@ -10,7 +11,7 @@ import useReviews from '../../Hooks/useReviews';
              <div>
                 <h2>Your Best Camara</h2>
                 <h2>welcome to my webpage</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quam deleniti sequi possimus mollitia ipsum pariatur consequatur alias dolores? Tenetur, sequi voluptatum dolorem eaque rem sit aliquid temporibus omnis doloremque expedita dolores praesentium quas ducimus culpa! Ad veritatis iure esse nam voluptatibus magni deleniti laborum deserunt! Aspernatur aperiam libero quia iusto ut, accusantium fugiat non.</p>
+                <p>Product design is the process designers use to blend user needs with business goals to help brands make consistently successful products. Product designers work to optimize the user experience in the solutions they make for their users—and help their brands by making products sustainable for longer-term business needs. </p>
 
                 <button className='btn-content'>Live Demo</button>
                 
@@ -23,8 +24,10 @@ import useReviews from '../../Hooks/useReviews';
              
 
            </div>
-         
-           
+{/*          
+           {
+             selectedReview.slice(0, 3)
+           } */}
          
            
            </>
